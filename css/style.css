@@ -217,9 +217,91 @@ form button:hover {
   background-color: var(--accent);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+.accordion {
+  margin-top: 20px;
+}
+
+.accordion-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: white;
+  color: var(--primary);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.accordion-btn:hover {
+  background-color: var(--light);
+}
+
+.accordion-content {
+  display: none;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  border-left: 4px solid var(--accent);
+}
+
+.accordion-content ul {
+  padding-left: 20px;
+}
+
+.accordion-content li {
+  margin-bottom: 6px;
+}
+
+#topBtn {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  padding: 14px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#topBtn:hover {
+  background-color: var(--accent);
+}
+
 @media (max-width: 768px) {
 
   nav {
+    position: relative;
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -243,14 +325,25 @@ form button:hover {
     flex-direction: column;
   }
 
+  .menu.show {
+    display: flex;
+  }
+
+  .menu a {
+    padding: 10px 0;
+  }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.menu.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary);
+  padding: 20px 0;
+  text-align: center;
+  gap: 15px;
+  z-index: 999;
 }
-
-.table-container {
-  overflow-x: auto;
-}
-
