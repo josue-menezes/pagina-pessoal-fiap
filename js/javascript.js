@@ -47,3 +47,61 @@ topBtn.addEventListener("click", function () {
         behavior: "smooth"
     });
 });
+
+const formulario = document.getElementById("formulario");
+
+if (formulario) {
+    formulario.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome");
+        const email = document.getElementById("email");
+        const mensagem = document.getElementById("mensagem");
+
+        const erroNome = document.getElementById("erroNome");
+        const erroEmail = document.getElementById("erroEmail");
+        const erroMensagem = document.getElementById("erroMensagem");
+        const mensagemSucesso = document.getElementById("mensagemSucesso");
+
+        erroNome.textContent = "";
+        erroEmail.textContent = "";
+        erroMensagem.textContent = "";
+
+        nome.classList.remove("erro");
+        email.classList.remove("erro");
+        mensagem.classList.remove("erro");
+
+        let formularioValido = true;
+
+        if (nome.value.trim().length < 3) {
+            erroNome.textContent = "⚠ Nome deve ter pelo menos 3 caracteres";
+            nome.classList.add("erro");
+            formularioValido = false;
+        }
+
+        const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailValido.test(email.value)) {
+            erroEmail.textContent = "⚠ Digite um e-mail válido";
+            email.classList.add("erro");
+            formularioValido = false;
+        }
+
+        if (mensagem.value.trim().length < 10) {
+            erroMensagem.textContent = "⚠ Mensagem deve ter pelo menos 10 caracteres";
+            mensagem.classList.add("erro");
+            formularioValido = false;
+        }
+
+        if (formularioValido) {
+            // Esconde o formulário e mostra mensagem de sucesso
+            formulario.style.display = "none";
+
+            mensagemSucesso.innerHTML = `
+                <div class="sucesso">
+                    <p><strong>✓ Mensagem enviada com sucesso!</strong></p>
+                    <p>Obrigado por entrar em contato, ${nome.value}! Retornarei em breve.</p>
+                </div>
+            `;
+        }
+    });
+}

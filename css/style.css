@@ -227,6 +227,7 @@ img {
 }
 
 .menu-btn {
+  display: none;
   background: none;
   border: none;
   color: white;
@@ -235,11 +236,7 @@ img {
 }
 
 .menu {
-  display: none;
-}
-
-.menu {
-  display: none;
+  display: flex;
 }
 
 .accordion {
@@ -325,8 +322,87 @@ img {
     flex-direction: column;
   }
 
+  .menu-btn {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
   .menu.show {
     display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary);
+    padding: 20px 0;
+    text-align: center;
+    gap: 15px;
+    z-index: 999;
+  }
+
+  .menu a {
+    padding: 10px 0;
+  }
+
+  @media (max-width: 768px) {
+
+  nav {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .contato {
+    flex-direction: column;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .menu.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary);
+    padding: 20px 0;
+    text-align: center;
+    gap: 15px;
+    z-index: 999;
   }
 
   .menu a {
@@ -334,16 +410,33 @@ img {
   }
 }
 
-.menu.show {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 55px;
-  left: 0;
-  width: 100%;
-  background-color: var(--primary);
-  padding: 20px 0;
-  text-align: center;
-  gap: 15px;
-  z-index: 999;
+  .menu a {
+    padding: 10px 0;
+  }
+}
+
+small {
+  color: #dc2626;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.erro {
+  border: 2px solid #dc2626;
+}
+
+.erro {
+  border: 2px solid red;
+}
+
+.sucesso {
+    background-color: #22c55e;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    line-height: 1.8;
 }

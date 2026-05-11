@@ -1,0 +1,11 @@
+#projetos .cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  #projetos .cards {
+    flex-direction: column;
+  }
+}
