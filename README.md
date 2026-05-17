@@ -13,3 +13,7 @@ Azul: #1E3A8A, Amarelo: #FACC15, Branco azulado: #EFF6FF, Azul escuro: #0F172A, 
 
  Logotipo:
 https://ui-avatars.com/api/?background=1E3A8A&color=EFF6FF&name=Josué+Menezes
+
+## Site publicado
+
+https://josue-menezes.github.io/pagina-pessoal-fiap/
