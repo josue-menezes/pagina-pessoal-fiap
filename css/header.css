@@ -1,0 +1,132 @@
+nav {
+  background-color: var(--primary);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: var(--light);
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--secondary);
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+}
+
+.hero {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+  max-width: none;
+  margin: 0;
+}
+
+.hero-content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+}
+
+.hero button {
+  background-color: var(--secondary);
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: var(--accent);
+}
+
+#topBtn {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  padding: 14px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#topBtn:hover {
+  background-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+
+  nav {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .menu.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary);
+    padding: 20px 0;
+    text-align: center;
+    gap: 15px;
+    z-index: 999;
+  }
+
+  .menu a {
+    padding: 10px 0;
+  }
+}
